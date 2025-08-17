@@ -1,47 +1,80 @@
 @import "tailwindcss";
 
+/* Custom slider styles */
+.slider-light::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.slider-light::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-light::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.slider-light::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-dark::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  border: 2px solid #374151;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+.slider-dark::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.slider-dark::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  border: 2px solid #374151;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+.slider-dark::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Remove default body styling */
 body {
   margin: 0;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  min-height: 100vh;
 }
 
-/* Custom slider styles */
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-input[type="range"]::-webkit-slider-track {
-  background: #d1d5db;
-  height: 8px;
-  border-radius: 4px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background: #3b82f6;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="range"]::-moz-range-track {
-  background: #d1d5db;
-  height: 8px;
-  border-radius: 4px;
-}
-
-input[type="range"]::-moz-range-thumb {
-  background: #3b82f6;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
